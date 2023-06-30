@@ -21,8 +21,5 @@ let package = Package(
         .target(
             name: "FileCachePackage",
             dependencies: []),
-        .testTarget(
-            name: "FileCachePackageTests",
-            dependencies: ["FileCachePackage"]),
     ]
 )
