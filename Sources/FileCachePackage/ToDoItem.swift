@@ -1,13 +1,13 @@
 import Foundation
 
 public struct ToDoItem {
-    let id: String
-    let taskText: String
-    let importance: Importance
-    let deadline: Date?
-    let completed: Bool
-    let createDate: Date
-    let editDate: Date?
+    public let id: String
+    public let taskText: String
+    public let importance: Importance
+    public let deadline: Date?
+    public let completed: Bool
+    public let createDate: Date
+    public let editDate: Date?
     
     // MARK: Initializer considering default values ​​for properties and field values
     
