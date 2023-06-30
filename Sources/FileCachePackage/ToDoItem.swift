@@ -23,7 +23,7 @@ public struct ToDoItem {
 
 }
 
-enum Importance: String {
+public enum Importance: String {
     case unimportant
     case regular
     case important
