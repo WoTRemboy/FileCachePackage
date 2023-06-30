@@ -1,7 +1,7 @@
 import Foundation
 
 public final class FileCache {
-    private(set) var items: [String: ToDoItem] = [:]
+    public var items: [String: ToDoItem] = [:]
     
     public init() {  }
     
