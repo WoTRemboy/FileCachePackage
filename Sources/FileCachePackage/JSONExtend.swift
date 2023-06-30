@@ -1,7 +1,7 @@
 import Foundation
 
 extension ToDoItem {
-    static func parse(json: Any) -> ToDoItem? {
+    public static func parse(json: Any) -> ToDoItem? {
         guard let data = json as? [String: Any],
               let id = data["id"] as? String,
               let taskText = data["taskText"] as? String,
@@ -29,7 +29,7 @@ extension ToDoItem {
                         editDate: editDate)
     }
     
-    var json: Any {
+    public var json: Any {
         var dictionary: [String: Any] = [
             "id": id,
             "taskText": taskText,

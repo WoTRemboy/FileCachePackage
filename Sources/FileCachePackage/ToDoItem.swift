@@ -1,6 +1,6 @@
 import Foundation
 
-struct ToDoItem {
+public struct ToDoItem {
     let id: String
     let taskText: String
     let importance: Importance

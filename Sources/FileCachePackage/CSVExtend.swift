@@ -1,7 +1,7 @@
 import Foundation
 
 extension ToDoItem {
-    static func parse(csv: String) -> ToDoItem? {
+    public static func parse(csv: String) -> ToDoItem? {
         let components = csv.components(separatedBy: ";")
         guard components.count >= 6,
               components[0] != "",   // id field check
@@ -44,7 +44,7 @@ extension ToDoItem {
                         editDate: editDate)
     }
     
-    var csv: String {
+    public var csv: String {
         let csvComponents: [String] = [
             id,
             taskText,

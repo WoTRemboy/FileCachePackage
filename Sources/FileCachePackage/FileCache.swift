@@ -5,13 +5,13 @@ public final class FileCache {
     
     public init() {  }
     
-    func add(item: ToDoItem) -> ToDoItem? {
+    public func add(item: ToDoItem) -> ToDoItem? {
         let replacedItem = items[item.id]
         items.updateValue(item, forKey: item.id)
         return replacedItem
     }
     
-    func remove(at id: String) -> ToDoItem? {
+    public func remove(at id: String) -> ToDoItem? {
         if let deletedItem = items[id] {
             items[id] = nil
             return deletedItem
@@ -22,7 +22,7 @@ public final class FileCache {
     
     // MARK: Working with JSON
     
-    func saveToFile(to fileName: String) {
+    public func saveToFile(to fileName: String) {
         let jsonItems = items.values.map { $0.json }
         
         do {
@@ -39,7 +39,7 @@ public final class FileCache {
         }
     }
     
-    func loadFromFile(from fileName: String) {
+    public func loadFromFile(from fileName: String) {
         do {
             guard let filesDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
                 print("Documents directory not found")
@@ -58,7 +58,7 @@ public final class FileCache {
     
     // MARK: Working with CSV
     
-    func saveToCSVFile(to fileName: String) {
+    public func saveToCSVFile(to fileName: String) {
         let csvItems = items.values.map { $0.csv }
         let csvString = csvItems.joined(separator: "\n")
         
@@ -75,7 +75,7 @@ public final class FileCache {
         }
     }
     
-    func loadFromCSVFile(from fileName: String) {
+    public func loadFromCSVFile(from fileName: String) {
         do {
             guard let filesDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {
                 print("Documents directory not found")
