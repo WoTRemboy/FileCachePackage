@@ -11,7 +11,7 @@ public struct ToDoItem {
     
     // MARK: Initializer considering default values ​​for properties and field values
     
-    init(id: String = UUID().uuidString, taskText: String, importance: Importance, deadline: Date? = nil, completed: Bool = false, createDate: Date = Date(), editDate: Date? = nil) {
+    public init(id: String = UUID().uuidString, taskText: String, importance: Importance, deadline: Date? = nil, completed: Bool = false, createDate: Date = Date(), editDate: Date? = nil) {
         self.id = id
         self.taskText = taskText
         self.importance = importance
